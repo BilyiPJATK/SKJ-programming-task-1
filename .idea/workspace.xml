@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b1f213b1-eae3-46b7-8d99-2e7b881d552e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SKJFirstProgrammingTask.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DAS.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2phtYBXKURMygVmCPGimydBHaEL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.DAS (1).executor": "Run",
+    "Application.DAS (2).executor": "Run",
+    "Application.DAS master 10.executor": "Run",
+    "Application.DAS master.executor": "Run",
+    "Application.DAS salve 20.executor": "Run",
+    "Application.DAS salve.executor": "Run",
+    "Application.DAS same as master.executor": "Run",
+    "Application.DAS slave 5031.executor": "Run",
+    "Application.DAS slave error notInt.executor": "Run",
+    "Application.DAS slave error string.executor": "Run",
+    "Application.DAS terminate.executor": "Run",
+    "Application.DAS zero.executor": "Run",
+    "Application.DAS.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.DAS slave 30">
+    <configuration name="DAS master 10" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DAS salve 20" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 20" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DAS slave 30" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 30" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DAS slave error notInt" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 13.1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DAS slave error string" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 abc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DAS terminate" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 -1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DAS zero" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5031 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DAS salve 20" />
+      <item itemvalue="Application.DAS slave 30" />
+      <item itemvalue="Application.DAS terminate" />
+      <item itemvalue="Application.DAS zero" />
+      <item itemvalue="Application.DAS master 10" />
+      <item itemvalue="Application.DAS slave error string" />
+      <item itemvalue="Application.DAS slave error notInt" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.DAS master 10" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1f213b1-eae3-46b7-8d99-2e7b881d552e" name="Changes" comment="" />
+      <created>1733230183084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733230183084</updated>
+      <workItem from="1733230184244" duration="2786000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
