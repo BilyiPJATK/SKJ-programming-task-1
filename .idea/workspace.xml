@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1f213b1-eae3-46b7-8d99-2e7b881d552e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SKJFirstProgrammingTask.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DAS.java" afterDir="false" />
+    <list default="true" id="b1f213b1-eae3-46b7-8d99-2e7b881d552e" name="Changes" comment="project version 1">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DAS.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -49,12 +45,22 @@
     "Application.DAS salve 20.executor": "Run",
     "Application.DAS salve.executor": "Run",
     "Application.DAS same as master.executor": "Run",
+    "Application.DAS slave 30.executor": "Run",
     "Application.DAS slave 5031.executor": "Run",
     "Application.DAS slave error notInt.executor": "Run",
     "Application.DAS slave error string.executor": "Run",
     "Application.DAS terminate.executor": "Run",
     "Application.DAS zero.executor": "Run",
     "Application.DAS.executor": "Run",
+    "Application.Master.executor": "Run",
+    "Application.Slave.executor": "Run",
+    "Application.Unnamed.executor": "Run",
+    "Application.simple Master (1).executor": "Run",
+    "Application.simple Master.executor": "Run",
+    "Application.simple slave (1).executor": "Run",
+    "Application.simple slave -1.executor": "Run",
+    "Application.simple slave 0.executor": "Run",
+    "Application.simple slave.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -67,7 +73,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.DAS slave 30">
+  <component name="RunManager" selected="Application.simple slave 0">
     <configuration name="DAS master 10" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="DAS" />
       <module name="SKJFirstProgrammingTask" />
@@ -124,7 +130,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="simple Master (1)" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5033 20" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple Master" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5032 20" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple slave -1 (1)" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5033 -1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple slave -1" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5032 -1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple slave 0 (1)" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5033 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple slave 0" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5032 0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple slave (1)" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5033 10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="simple slave" type="Application" factoryName="Application" folderName="New Folder">
+      <option name="MAIN_CLASS_NAME" value="DAS" />
+      <module name="SKJFirstProgrammingTask" />
+      <option name="PROGRAM_PARAMETERS" value="5032 10" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="Application.simple Master" />
+      <item itemvalue="Application.simple Master (1)" />
+      <item itemvalue="Application.simple slave" />
+      <item itemvalue="Application.simple slave (1)" />
+      <item itemvalue="Application.simple slave -1" />
+      <item itemvalue="Application.simple slave -1 (1)" />
+      <item itemvalue="Application.simple slave 0" />
+      <item itemvalue="Application.simple slave 0 (1)" />
       <item itemvalue="Application.DAS salve 20" />
       <item itemvalue="Application.DAS slave 30" />
       <item itemvalue="Application.DAS terminate" />
@@ -147,11 +225,32 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733230183084</updated>
-      <workItem from="1733230184244" duration="2786000" />
+      <workItem from="1733230184244" duration="14950000" />
     </task>
+    <task id="LOCAL-00001" summary="project version 1">
+      <option name="closed" value="true" />
+      <created>1733233174508</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733233174508</updated>
+    </task>
+    <task id="LOCAL-00002" summary="project version 1">
+      <option name="closed" value="true" />
+      <created>1733233216064</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733233216064</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="project version 1" />
   </component>
 </project>

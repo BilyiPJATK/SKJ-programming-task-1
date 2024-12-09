@@ -3,15 +3,9 @@ import java.io.*;
 import java.util.*;
 
 public class DAS {
-    private static final int BUFFER_SIZE = 1024;
-    private static List<Integer> receivedNumbers = new ArrayList<>();
-    private static int masterNumber;
-
     public static void main(String[] args) {
-        System.out.println("Arguments received: " + Arrays.toString(args));
-
         if (args.length != 2) {
-            System.out.println("Usage: java DAS <port> <number>");
+            System.out.println("specify port and number");
             return;
         }
 
@@ -20,102 +14,81 @@ public class DAS {
         try {
             port = Integer.parseInt(args[0]);
             number = Integer.parseInt(args[1]);
-        } catch (NumberFormatException e) {
-            System.out.println("Invalid port or number. Both should be integers.");
+        } catch (Exception e) {
+            System.out.println("Port and number must be integers.");
             return;
         }
 
         try {
-            // Try to open the port (Master Mode)
             DatagramSocket socket = new DatagramSocket(port);
-            System.out.println("Running in Master mode on port " + port);
-            runAsMaster(socket, number, port);
+            System.out.println("Master mode running on port " + port);
+            runMaster(socket, number);
         } catch (SocketException e) {
-            // If the port is already in use, run as Slave
-            System.out.println("Running in Slave mode.");
-            runAsSlave(port, number);
+            System.out.println("Slave mode running.");
+            runSlave(port, number);
         }
-
     }
 
-    private static void runAsMaster(DatagramSocket socket, int number, int port) {
-        masterNumber = number;
-        receivedNumbers.add(number); // Store the initial number
+    private static void runMaster(DatagramSocket socket, int number) {
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(number);
+        System.out.println("Master received initial number: " + number);
+        byte[] buffer = new byte[1024];
 
-        try {
-            byte[] buffer = new byte[BUFFER_SIZE];
-            while (true) {
+        while (true) {
+            try {
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 socket.receive(packet);
 
-                String receivedData = new String(packet.getData(), 0, packet.getLength());
-                int receivedNumber;
-                try {
-                    receivedNumber = Integer.parseInt(receivedData);
-                } catch (NumberFormatException e) {
-                    System.out.println("Invalid data received: " + receivedData);
-                    continue;
-                }
-
+                String received = new String(packet.getData(), 0, packet.getLength());
+                int receivedNumber = Integer.parseInt(received);
                 System.out.println("Received: " + receivedNumber);
 
                 if (receivedNumber == 0) {
-                    // Calculate and broadcast average
-                    int average = calculateAverage();
-                    System.out.println("Average: " + average);
-                    broadcastMessage(socket, port, String.valueOf(average));
+                    int sum = 0;
+                    for (int num : numbers) {
+                        sum += num;
+                    }
+                    int average = sum / numbers.size();
+                    System.out.println("Numbers received: " + numbers);
+                    System.out.println("Broadcast average: " + average);
+                    broadcast(socket, packet.getPort(), String.valueOf(average));
                 } else if (receivedNumber == -1) {
-                    // Broadcast -1 and terminate
-                    broadcastMessage(socket, port, "-1");
-                    System.out.println("Shutting down Master.");
-                    socket.close();
+                    System.out.println("Terminating");
+                    broadcast(socket, packet.getPort(), "-1");
                     break;
                 } else {
-                    // Store the number
-                    receivedNumbers.add(receivedNumber);
+                    numbers.add(receivedNumber);
                 }
+            } catch (IOException | NumberFormatException e) {
+                System.out.println("Error processing packet: " + e.getMessage());
             }
-        } catch (IOException e) {
-            System.out.println("Error in Master mode: " + e.getMessage());
         }
+
+        socket.close();
     }
 
-    private static void runAsSlave(int port, int number) {
-        try (DatagramSocket socket = new DatagramSocket()) {
-            String message = String.valueOf(number);
-            byte[] data = message.getBytes();
-
+    private static void runSlave(int port, int number) {
+        try {
+            DatagramSocket socket = new DatagramSocket();
+            byte[] data = String.valueOf(number).getBytes();
             InetAddress address = InetAddress.getByName("localhost");
             DatagramPacket packet = new DatagramPacket(data, data.length, address, port);
 
             socket.send(packet);
-            System.out.println("Sent: " + message);
+            System.out.println("Sent: " + number);
         } catch (IOException e) {
             System.out.println("Error in Slave mode: " + e.getMessage());
         }
     }
 
-    private static int calculateAverage() {
-        int sum = 0;
-        int count = 0;
-        for (int num : receivedNumbers) {
-            if (num != 0) {
-                sum += num;
-                count++;
-            }
-        }
-        return count > 0 ? sum / count : 0;
-    }
-
-    private static void broadcastMessage(DatagramSocket socket, int port, String message) {
+    private static void broadcast(DatagramSocket socket, int port, String message) {
         try {
             byte[] data = message.getBytes();
             InetAddress broadcastAddress = InetAddress.getByName("255.255.255.255");
             DatagramPacket packet = new DatagramPacket(data, data.length, broadcastAddress, port);
-
             socket.setBroadcast(true);
             socket.send(packet);
-            System.out.println("Broadcasted: " + message);
         } catch (IOException e) {
             System.out.println("Error broadcasting message: " + e.getMessage());
         }
