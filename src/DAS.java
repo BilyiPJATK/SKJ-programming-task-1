@@ -84,11 +84,24 @@ public class DAS {
 
     private static void broadcast(DatagramSocket socket, int port, String message) {
         try {
+            InetAddress localHost = InetAddress.getLocalHost();
+
+            byte[] ipBytes = localHost.getAddress();
+            byte[] subnetMask = {(byte) 255, (byte) 255, (byte) 255, 0};
+
+            byte[] broadcastBytes = new byte[4];
+            for (int i = 0; i < ipBytes.length; i++) {
+                broadcastBytes[i] = (byte) (ipBytes[i] | ~subnetMask[i]);
+            }
+
+            InetAddress broadcastAddress = InetAddress.getByAddress(broadcastBytes);
+
             byte[] data = message.getBytes();
-            InetAddress broadcastAddress = InetAddress.getByName("255.255.255.255");
             DatagramPacket packet = new DatagramPacket(data, data.length, broadcastAddress, port);
             socket.setBroadcast(true);
             socket.send(packet);
+
+
         } catch (IOException e) {
             System.out.println("Error broadcasting message: " + e.getMessage());
         }
